@@ -2,10 +2,46 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem
+}
+
+.navbar-brand {
+    font-family: cursive;
+    font-weight: 700;
+    line-height: 3;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
 .navbar-collapse {
-    margin-left: 65%;
+    margin-left: 55%;
 }
 
 .nav-link {
     margin-left: 50px;
+}
+
+.btn-success {
+    font-size: 1.3rem;
+    padding: 6px 5px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: #198754;
+}
+
+main {
+    margin: 100px auto;
+    width: 94%;
+}
+
+.flex-row {
+    margin-left: 45%;
 }
