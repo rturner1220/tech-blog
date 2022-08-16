@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar-collapse {
+    margin-left: 65%;
+}
+
+.nav-link {
+    margin-left: 50px;
+}
