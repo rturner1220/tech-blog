@@ -8,7 +8,14 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const exphbs = require('express-handlebars');
-const hbs = exphbs.create({ helpers });
+const config = {
+    extname: 'hbs',
+    defaultLayout: 'main',
+    layoutsDir: path.join(__dirname, "views", "layouts"),
+    partialsDir: path.join(__dirname, "views", "partials"),
+    helpers,
+};
+const hbs = exphbs.create(config);
 
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -32,11 +39,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 //required for Express Handlebars
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine('hbs', hbs.engine);
+app.set('view engine', 'hbs');
 
 app.use(session(sess));
 
+app.use(function (req, res, next) {
+    res.locals.session = req.session;
+    next();
+});
 
 // Router
 app.use(routes);

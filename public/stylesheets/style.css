@@ -40,6 +40,14 @@ body {
     margin-top: 50%;
 }
 
+.is-flex {
+    margin-top: 30px;
+}
+
+#delete-btn {
+    margin-left: 40px;
+}
+
 a {
     text-decoration: none;
     color: #198754;
@@ -50,7 +58,10 @@ main {
     width: 94%;
 }
 
-
+.card-text {
+    margin-top: 20px;
+    height: 70px;
+}
 
 footer {
     text-align: center;

@@ -1,0 +1,26 @@
+<article id="post-container">
+    <div class="card text-center">
+        <div class="card-header">
+            <h2>Edit Post</h2>
+        </div>
+        <form class="container p-3">
+            <div class="mb-3">
+                <label class="form-label" for="post-title"></label>
+                <input class="form-control" name="post-title" id="post-title" type="text" value="{{post.title}}" />
+            </div>
+            <div class=class="mb-3">
+                <label for="post-body" class="form-label"></label>
+                <textarea class="form-control" rows="8" name="post-body" id="post-body">{{post.contents}}</textarea>
+            </div>
+
+            <div class="is-flex">
+                <button class="btn btn-warning btn-lg" id="save-btn">Save Changes</button>
+
+                <button class="btn btn-danger btn-lg" id="delete-btn" data-type="delete-btn"
+                    data-id="{{post.id}}">Delete
+                    This Post</button>
+            </div>
+        </form>
+    </div>
+</article>
+<script src="/javascript/edit-post.js"></script>

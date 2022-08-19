@@ -2,15 +2,15 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// // Get all comments
-// router.get('/', (req, res) => {
-//     Comment.findAll()
-//         .then(dbCommentData => res.json(dbCommentData))
-//         .catch(err => {
-//             console.log(err);
-//             res.status(500).json(err);
-//         });
-// });
+// Get all comments
+router.get('/', (req, res) => {
+    Comment.findAll()
+        .then(dbCommentData => res.json(dbCommentData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
 // Create comment
 router.post('/', withAuth, (req, res) => {
@@ -19,7 +19,9 @@ router.post('/', withAuth, (req, res) => {
             comment_text: req.body.comment_text,
             post_id: req.body.post_id,
             user_id: req.session.user_id
+
         })
+
             .then(dbCommentData => res.json(dbCommentData))
             .catch(err => {
                 console.log(err);
