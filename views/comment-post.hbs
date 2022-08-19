@@ -32,7 +32,7 @@
     </section>
     {{/if}}
 
-    <form id="#new-comment" class="card">
+    <form id="new-comment" class="card">
         <div class="card-header">
             <h3>Add a Comment</h3>
         </div>
@@ -40,11 +40,11 @@
         <div class="card-body">
             <input type="hidden" name="post-id" value="{{post.id}}" />
 
-            <label class="form-label" for="comment-body">Comment</label>
+            <label class="form-label">Comment</label>
+            <textarea name="comment-body" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea name="comment-body">
+            
 
-            <textarea name="comment-body" class="form-input"></textarea>
-
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
         </div>
     </form>
 </div>
