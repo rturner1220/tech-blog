@@ -23,28 +23,24 @@ router.get("/new", (req, res) => {
     res.render("new-post");
 });
 
-// router to edit & delete post
+//router to edit & delete post
 router.get("/edit/:id", (req, res) => {
-    res.render("edit-post");
+    Post.findByPk(req.params.id)
+        .then(dbPostData => {
+            if (dbPostData) {
+                const post = dbPostData.get({ plain: true });
+
+                res.render("edit-post", {
+                    post
+                });
+            } else {
+                res.status(404).end();
+            }
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        });
 });
-
-// router.get('/', withAuth, (req, res) => {
-//     Post.findByPk(req.params.id)
-//         .then(dbPostData => {
-//             if (dbPostData) {
-//                 const post = dbPostData.get({ plain: true });
-
-//                 res.render("edit-post", {
-//                     post
-//                 });
-//             } else {
-//                 res.status(404).end();
-//             }
-//         })
-//         .catch(err => {
-//             res.status(500).json(err);
-//         });
-// });
 
 
 module.exports = router;

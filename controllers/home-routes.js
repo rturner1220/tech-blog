@@ -41,42 +41,33 @@ router.get('/', (req, res) => {
 
 
 
-// show all post on the main page
-router.get('/', (req, res) => {
-    res.render("main");
-});
 
-
-
-// // get single post
-// router.get("/post/:id", (req, res) => {
-//     Post.findByPk(req.params.id, {
-//         include: [
-//             User,
-//             {
-//                 model: Comment,
-//                 include: [User],
-//             },
-//         ],
-//     })
-//         .then((dbPostData) => {
-//             if (dbPostData) {
-//                 const post = dbPostData.get({ plain: true });
-
-//                 res.render("comment-post", { post });
-//             } else {
-//                 res.status(404).end();
-//             }
-//         })
-//         .catch((err) => {
-//             res.status(500).json(err);
-//         });
-// });
-
-
-// Create comment
+// get comment post
 router.get('/post/:id', (req, res) => {
-    res.render('comment-post');
+    Post.findByPk(req.params.id, {
+        include: [
+            User,
+            {
+                model: Comment,
+                include: [User],
+            },
+        ],
+    })
+        .then((dbPostData) => {
+            if (dbPostData) {
+                const post = dbPostData.get({ plain: true });
+                console.log(post)
+                res.render("comment-post", { post });
+            } else {
+                res.status(404).end();
+            }
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        });
 });
+
+
+
 
 module.exports = router;

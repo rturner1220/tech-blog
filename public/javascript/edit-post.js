@@ -1,12 +1,12 @@
-async function editFormHandler(event) {
+const postId = document.querySelector('input[name="post-id"]').value;
+
+const editFormHandler = async function (event) {
     event.preventDefault();
 
-    const title = document.querySelector('post-title').value;
-    const contents = document.querySelector('post-body').value;
-    const postId = document.querySelector('delete-btn').dataset.id;
+    const title = document.querySelector('input[name="post-title"]').value;
+    const contents = document.querySelector('textarea[name="post-body"]').value;
 
-
-    const response = await fetch(`/api/post/${postId}`, {
+    await fetch(`/api/post/${postId}`, {
         method: 'PUT',
         body: JSON.stringify({
             title,
@@ -17,25 +17,17 @@ async function editFormHandler(event) {
         }
     });
 
-    if (response.ok) {
-        document.location.replace(`/dashboard`);
-    } else {
-        alert(response.statusText);
-    }
-}
-
-
+    document.location.replace('/dashboard');
+};
 
 const deleteClickHandler = async function () {
     await fetch(`/api/post/${postId}`, {
         method: 'DELETE'
     });
 
-    document.location.replace(`/dashboard`);
+    document.location.replace('/dashboard');
 };
 
+document.querySelector('#post-container').addEventListener('submit', editFormHandler);
 
-
-document.querySelector('#save-btn').addEventListener('submit', editFormHandler);
-
-document.querySelector('#post-container').addEventListener('click', deleteClickHandler);
+document.querySelector('#delete-btn').addEventListener('click', deleteClickHandler);
