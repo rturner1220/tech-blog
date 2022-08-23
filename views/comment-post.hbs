@@ -9,30 +9,9 @@
         </div>
         <div class="card-body">
             {{post.contents}}
-        </div>
 
+        </div>
     </article>
-
-    {{#if post.Comments}}
-    <section class="card">
-        <div class="card-header">
-            <h3>Comments</h3>
-        </div>
-
-        <div class="card-body">
-            {{#each post.Comments}}
-            <div>
-                <p>
-                    {{body}}
-                </p>
-                <p>
-                    &mdash; {{User.username}}, {{createdAt}}
-                </p>
-            </div>
-            {{/each}}
-        </div>
-    </section>
-    {{/if}}
 
     <form id="new-comment" class="card">
         <div class="card-header">
