@@ -8,6 +8,10 @@ body {
     font-size: 1.2rem
 }
 
+.navbar {
+    position: sticky;
+}
+
 .navbar-brand {
     font-family: cursive;
     font-weight: 700;
