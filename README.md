@@ -4,11 +4,11 @@
 This is a blog, where developers can also post and comment on other developers' posts. Also they can edit or delete their posts!
 
 ## Table of Contents
-* [Acceptance Criteria](#Acceptance Criteria)
-* [Technologies Use](#Technologies Use)
-* [Contact Information](#Contact Information)
-* [Deployed Heroku site](Deployed Heroku site)
-* [Deployed Site Screenshots](#Deployed Site Screenshots)
+* [Acceptance Criteria](#acceptance-criteria)
+* [Technologies Use](#technologies-use)
+* [Contact Information](#contact-information)
+* [Deployed Heroku site](deployed-heroku-site)
+* [Deployed Site Screenshots](#deployed-site-screenshots)
 
 
 # Acceptance Criteria
