@@ -1,5 +1,5 @@
- Tech Blog
------------------------------------------------------------------------------------------------------------------------------------------------------
+# Tech Blog
+
 # Description:
 This is a blog, where developers can also post and comment on other developers' posts. Also they can edit or delete their posts!
 
