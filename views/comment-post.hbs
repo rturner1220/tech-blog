@@ -9,25 +9,25 @@
         </div>
         <div class="card-body">
             {{post.contents}}
-
         </div>
+        <section class="column">
+            {{post.comments}}
+        </section>
+
     </article>
 
     <form id="new-comment" class="card">
         <div class="card-header">
             <h3>Add a Comment</h3>
-        </div>
 
-        <div class="card-body">
-            <input type="hidden" name="post-id" value="{{post.id}}" />
+            <div class="card-body">
+                <input type="hidden" name="post-id" value="{{post.id}}" />
+                <label class="form-label">Comment</label>
+                <textarea name="comment-body" class="form-control" rows="3">
+              </textarea>
 
-            <label class="form-label">Comment</label>
-            <textarea name="comment-body" class="form-control" id="exampleFormControlTextarea1" rows="3">
-              </textarea name="comment-body">
-            
-
-            <button type="submit" class="btn btn-success">Submit</button>
-        </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
     </form>
 </div>
 
