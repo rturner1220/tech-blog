@@ -36,7 +36,7 @@ const PORT = process.env.PORT || 3005
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //required for Express Handlebars
 app.engine('hbs', hbs.engine);
@@ -51,8 +51,6 @@ app.use(function (req, res, next) {
 
 // Router
 app.use(routes);
-
-
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
