@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+router.use(withAuth);
+
 // get all posts for Dashboard
 router.get('/', (req, res) => {
     Post.findAll({

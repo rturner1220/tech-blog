@@ -11,7 +11,12 @@
             {{post.contents}}
         </div>
         <section class="column">
-            {{post.comments}}
+            <ul>
+                {{#each post.comments}}
+                <li>{{this.comment_text}}</li>
+                <strong>{{this.user.username}} - {{format_date createdAt}}</strong>
+                {{/each}}
+            </ul>
         </section>
 
     </article>
