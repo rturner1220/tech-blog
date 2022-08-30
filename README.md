@@ -64,9 +64,13 @@ This is a blog, where developers can also post and comment on other developers' 
 * rmturner1220@gmail.com
 
 # Deployed Heroku site
-
+https://postingonblog.herokuapp.com/
 
 # Deployed Site Screenshots
+![image](https://user-images.githubusercontent.com/101642385/187487924-d584e412-0ac7-4783-90ac-0ffae4efc5c5.png)
+![image](https://user-images.githubusercontent.com/101642385/187487982-55cb2765-797c-4497-ace8-d58d438a670f.png)
+![image](https://user-images.githubusercontent.com/101642385/187488051-1eb0cf9e-6a92-45f1-a224-98f0228b4e1c.png)
+![image](https://user-images.githubusercontent.com/101642385/187488089-b2e443fe-65b4-4861-ac58-77e4f28c9352.png)
 
 
 
