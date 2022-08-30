@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-            res.render("homepage", { posts });
+            res.render("homepage", { posts, loggedIn: req.session.loggedIn });
         })
         .catch((err) => {
             res.status(500).json(err);
@@ -53,7 +53,7 @@ router.get('/post/:id', (req, res) => {
             if (dbPostData) {
                 const post = dbPostData.get({ plain: true });
                 console.log(post)
-                res.render("comment-post", { post });
+                res.render("comment-post", { post, loggedIn: req.session.loggedIn });
             } else {
                 res.status(404).end();
             }
