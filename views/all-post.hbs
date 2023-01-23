@@ -1,0 +1,13 @@
+<div class="card-body">
+    {{#each posts}}
+    <h2 class="card-header ">
+        <a href="/dashboard/edit/{{id}}">{{title}}</a>
+    </h2>
+    <h6 class="card-text">Posted by {{user.username}} on {{format_date createdAt}}</h6>
+    {{/each}}
+
+</div>
+
+<div class="d-grid gap-2 col-4 mx-auto">
+    <a id="new-post" href="/dashboard/new">New Post</a>
+</div>

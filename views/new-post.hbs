@@ -1,0 +1,19 @@
+<div class="card text-center">
+    <div class="card-header">
+        <h2>Create a Post</h2>
+    </div>
+    <div class="card-body">
+        <form id="new-form" action="/api/post" method="post">
+            <div class="mb-3">
+                <label for="post-title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="post-title" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="post-body" class="form-label">Content</label>
+                <textarea name="contents" class="form-control" id="post-body" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Create</button>
+        </form>
+    </div>
+
+    <script src="/javascript/new-post.js"></script>

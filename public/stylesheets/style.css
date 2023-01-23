@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem
+}
+
+.navbar {
+    position: sticky;
+}
+
+.navbar-brand {
+    font-family: cursive;
+    font-weight: 700;
+    line-height: 3;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+.navbar-collapse {
+    margin-left: 55%;
+}
+
+.nav-link {
+    margin-left: 50px;
+}
+
+.btn-success {
+    font-size: 1.3rem;
+    padding: 6px 5px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#new-post {
+    background-color: #198754;
+    color: white;
+    padding: 1rem;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50%;
+}
+
+.is-flex {
+    margin-top: 30px;
+}
+
+#delete-btn {
+    margin-left: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #198754;
+}
+
+main {
+    margin: 100px auto;
+    width: 94%;
+}
+
+.card-text {
+    margin-top: 20px;
+    height: 70px;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: -10%;
+}
